@@ -24,14 +24,14 @@ int32_t main()
 {
     int time_unit;
     cin>>time_unit;
+    
     vector<int>v;
     //map<int,int>mp; mp[knapSack(time_unit, wt,val,3)]++; for futue reference
-  
     int ans=knapSack(time_unit, wt,val,3);
     for(auto i:val){
       if(i%ans==0) v.push_back(i/ans);
       else v.push_back(0);
     }
-    
+    cout<<"Earnings: "<<ans<<endl;
     cout<<"T: "<<v[0]<<" P: "<<v[1]<<" C: "<<v[2]<<endl;
 }
